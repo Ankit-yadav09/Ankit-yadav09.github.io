@@ -16,7 +16,6 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-          Make Portfolio
         </a>
       </header>
     </div>
