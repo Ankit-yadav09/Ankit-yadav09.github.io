@@ -1,25 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import { Flex, Heading, VStack } from '@chakra-ui/react';
-import Navbar from './components/Navbar';
+import { Box, Flex, Heading, VStack } from '@chakra-ui/react';
 import Profile from './components/Profile';
+import Navbar from './components/Navbar';
+import Middle from './components/Middle';
 
 function App() {
   return (
-    // <div className="App">
       
-      <VStack padding={5}bg="grey">
-        <Flex width="100%" bg="orange.400">
-          <Heading
-          ml="8"  size="md" fontWeight="semibold" color="cyan.400"
-          >
-            Ankit
-          </Heading>
-        </Flex>
+      <VStack padding={5}>
         <Navbar/>
+        <Middle/>
         <Profile/>
       </VStack>
-    // </div>
+
   );
 }
 
