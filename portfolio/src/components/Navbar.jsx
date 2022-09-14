@@ -18,17 +18,17 @@ function Navbar () {
 
 const {colorMode, toggleColorMode} =useColorMode();
 const isDark = colorMode==="dark";
-let name="<Ankit/>"
+let name="/*Ankit*/"
   return (
     <Box width="100%" backgroundColor='orange.400' 
-    height={{base:"220px",sm:'80px'}} p={5}
+    height={{base:"220px",sm:'100px'}} p={5}
      display={{ md: 'flex', sm:'flex', }}>
         <Box flexShrink={0}>
-        <Text mt={3} fontSize={22} fontWeight="bold" cursor='pointer'>{name}</Text>
+        <Text mt={3} fontSize={22} fontStyle="italic" fontWeight="bold" cursor='pointer'>{name}</Text>
           
         </Box>
         <Spacer></Spacer>
-        <Box display={{ md: 'flex', sm:'flex' , }} gap={{base:'10px',sm:"5px", md:"10px", xl:"20px"}}
+        <Box display={{ md: 'flex', sm:'flex' , }} gap={{base:'10px',sm:"5px", md:"10px", xl:"40px"}}
         
             p={3} mt={{base:-10, sm:0, md:0 ,base: 4, md: 0 }} ml={{ md: 2 }} mr={{ md: 2, xl: 10, sm:0 }}  >
           <Text fontSize={['md', 'lg', 'xl', '2xl']}
