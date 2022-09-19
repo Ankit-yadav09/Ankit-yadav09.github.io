@@ -1,0 +1,44 @@
+.about{
+    /* height: 600px; */
+    margin-top: 30px;
+    /* border: 1px solid grey; */
+    /* background-color: rgb(133, 233, 133); */
+    text-align: center;
+}
+.skills{
+    height: 600px;
+    margin-top: 30px;
+    border: 1px solid grey;
+    background-color: rgb(197, 234, 62);
+    text-align: center;
+}
+.projects{
+    height: 600px;
+    margin-top: 30px;
+    border: 1px solid grey;
+    background-color: rgb(151, 112, 243);
+    text-align: center;
+}
+.contact{
+    height: 600px;
+    margin-top: 30px;
+    border: 1px solid grey;
+    background-color: rgb(86, 231, 226);
+    text-align: center;
+}
+.scrollTopbtn{
+    position: fixed;
+    bottom: 40px;
+    border-radius: 50%;
+    opacity: 0.5;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(55, 230, 184);
+    color: rgb(26, 25, 25);
+    cursor: pointer;
+}
+.scrollTopbtn:hover{
+    opacity: 1;
+    color:rgb(251, 44, 44)
+}
