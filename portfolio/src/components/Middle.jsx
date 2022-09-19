@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Box, Button, Container, extendTheme, Image, Link, Spacer, Text } from '@chakra-ui/react'
+import { Box, Button, Container, extendTheme, Grid, GridItem, Heading, Image, Link, Spacer, Text } from '@chakra-ui/react'
 import styles from "../styles/middle.module.css"
 import Navbar from './Navbar'
 import ShowScrollTop from './ShowScrollTop'
@@ -128,9 +128,48 @@ function Middle() {
           </Box>
         </Box>
         </Box>
-        
+        <br />
+   
         <Box ref={skills} className={styles.skills}>
+          <Heading size="xl" textAlign="start">SKILLS</Heading>
+          <br />
+          <br />
+          <Heading >Front-End</Heading>
+          <br />
+          <Grid templateColumns='repeat(6, 1fr)' gap={6} className={styles.skillsGrid}>
+            <GridItem w='100%' h='20' bg='gray.300' >
+             <Heading size="md" margin="20px" >HTML</Heading> </GridItem>
+            <GridItem w='100%' h='20' bg='gray.300' >
+             <Heading size="md" margin="20px" >CSS</Heading> </GridItem>
+            <GridItem w='100%' h='20' bg='gray.300' >
+             <Heading size="md" margin="20px" >JAVASCRIPT</Heading> </GridItem>
+            <GridItem w='100%' h='20' bg='gray.300' >
+             <Heading size="md" margin="20px" >REACT</Heading> </GridItem>
+            <GridItem w='100%' h='20' bg='gray.300' >
+             <Heading size="md" margin="20px" >REDUX</Heading> </GridItem>
+            <GridItem w='100%' h='20' bg='gray.300' >
+             <Heading size="md" margin="20px" >CHAKRA UI</Heading> </GridItem>
+            
+          </Grid>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           
+          
+          <Heading>Back-End and Database</Heading>
+          <br />
+          <Grid templateColumns='repeat(3, 1fr)' gap={6} className={styles.skillsGrid}>
+          <GridItem w='100%' h='20' bg='gray.300' >
+             <Heading size="md" margin="20px" >NODE</Heading> </GridItem>
+            <GridItem w='100%' h='20' bg='gray.300' >
+             <Heading size="md" margin="20px" >EXPRESS</Heading> </GridItem>
+            <GridItem w='100%' h='20' bg='gray.300' >
+             <Heading size="md" margin="20px" >MONGODB</Heading> </GridItem>
+            
+          </Grid>
         </Box>
         
         <Box ref={projects} className={styles.projects}>
