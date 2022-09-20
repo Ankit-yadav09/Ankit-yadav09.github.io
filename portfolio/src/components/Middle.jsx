@@ -80,14 +80,24 @@ function Middle() {
           </Box>
           <Image
               borderRadius='full'
-              width={{ sm: 60, lg:400 }}
+              width={{ sm: 60, md:200, lg:400 ,base:60}}
               src={process.env.PUBLIC_URL+"/port.jpg"}
 
             />
         </Box>
           <br />
           <br />
-        <Box ref={about} className={styles.about}>
+          <br />
+          <br />
+          <br />
+          <br />
+
+        <Box ref={about} className={styles.skillsHeading}
+          backgroundColor="green.100" >
+          <Heading size="lg" textAlign="start">ABOUT</Heading>
+        </Box>
+
+        <Box className={styles.about}>
           {/* About */}
           <Box p={20} display={{ md: 'flex' }}>
           <Box flexShrink={1}>
@@ -131,12 +141,17 @@ function Middle() {
         </Box>
         </Box>
         <br />
-   
-        <Box ref={skills} className={styles.skills}>
-          <Heading size="xl" textAlign="start">SKILLS</Heading>
+        
+        <Box ref={skills} className={styles.skillsHeading}
+          backgroundColor="green.100" >
+          <Heading size="lg" textAlign="start">SKILLS</Heading>
+        </Box>
+        
+        <Box  className={styles.skills}>
+          
           <br />
           <br />
-          <Heading >Front-End</Heading>
+          <Heading color="teal.600" fontWeight="semibold">Front-End</Heading>
           <br />
           <Grid templateColumns='repeat(6, 1fr)' gap={6} className={styles.skillsGrid}>
             <GridItem w='100%' h='20' bg='gray.300' >
@@ -161,7 +176,7 @@ function Middle() {
           <br />
           
           
-          <Heading>Back-End and Database</Heading>
+          <Heading color="teal.600" fontWeight="semibold">Back-End and Database</Heading>
           <br />
           <Grid templateColumns='repeat(3, 1fr)' gap={6} className={styles.skillsGrid}>
             <GridItem w='100%' h='20' bg='gray.300' >
@@ -173,16 +188,21 @@ function Middle() {
             
           </Grid>
         </Box>
-        <br />
           <br />
           <br />
           <br />
           <br />
           <br />
-        <Box ref={projects} className={styles.projects}>
+
+          <Box ref={projects} className={styles.skillsHeading}
+          backgroundColor="green.100" >
+          <Heading size="lg" textAlign="start">PROJECTS</Heading>
+        </Box>
+          <br />
+        <Box className={styles.projects}>
           
           <Box className={styles.projectHead}>
-          <Heading size="lg" margin="20px" >ASOS-Clone</Heading> 
+          <Heading size="lg" margin="20px" color='teal.600'>ASOS-Clone</Heading> 
             <hr />
             <Heading size="md" margin="20px" textAlign="left" >
               Tech-Stack :  React | React-Routing | Context-API | Chakra UI</Heading> 
@@ -220,7 +240,7 @@ function Middle() {
         <Box className={styles.projects}>
           
           <Box className={styles.projectHead}>
-          <Heading size="lg" margin="20px" >Banggood-Clone</Heading> 
+          <Heading size="lg" margin="20px" color='teal.600'>Banggood-Clone</Heading> 
             <hr />
             <Heading size="md" margin="20px" textAlign="left" >
               Tech-Stack :  JavaScript | HTML | CSS </Heading> 
@@ -260,7 +280,7 @@ function Middle() {
         <Box className={styles.projects}>
           
           <Box className={styles.projectHead}>
-          <Heading size="lg" margin="20px" >Kindmeal.my-Clone</Heading> 
+          <Heading size="lg" margin="20px" color='teal.600'>Kindmeal.my-Clone</Heading> 
             <hr />
             <Heading size="md" margin="20px" textAlign="left" >
               Tech-Stack :  React | React-Routing | JavaScript | Context-API | Chakra UI </Heading> 
@@ -295,7 +315,13 @@ function Middle() {
 
         <br />
         <br />
-        <Box ref={contact} className={styles.contact}>
+
+        <Box ref={contact} className={styles.skillsHeading}
+          backgroundColor="green.100" >
+          <Heading size="lg" textAlign="start">CONTACT</Heading>
+        </Box>
+
+        <Box className={styles.contact}>
         <Link  href='https://github.com/Ankit-yadav09' isExternal>
           <Heading size="sm" >Github</Heading>
         </Link>
