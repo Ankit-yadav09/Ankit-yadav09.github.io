@@ -1,8 +1,10 @@
 import React, { useRef } from 'react'
-import { Box, Button, Container, extendTheme, Grid, GridItem, Heading, Image, Link, Spacer, Text } from '@chakra-ui/react'
+import { Box, Button, Container, extendTheme, Grid, GridItem, Heading, Image, LinkBox, Spacer, Text } from '@chakra-ui/react'
 import styles from "../styles/middle.module.css"
 import Navbar from './Navbar'
 import ShowScrollTop from './ShowScrollTop'
+import { Link } from '@chakra-ui/react'
+
 
 const breakpoints = {
     sm: '320px',
@@ -162,7 +164,7 @@ function Middle() {
           <Heading>Back-End and Database</Heading>
           <br />
           <Grid templateColumns='repeat(3, 1fr)' gap={6} className={styles.skillsGrid}>
-          <GridItem w='100%' h='20' bg='gray.300' >
+            <GridItem w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >NODE</Heading> </GridItem>
             <GridItem w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >EXPRESS</Heading> </GridItem>
@@ -171,13 +173,138 @@ function Middle() {
             
           </Grid>
         </Box>
-        
+        <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         <Box ref={projects} className={styles.projects}>
-          Projects
+          
+          <Box className={styles.projectHead}>
+          <Heading size="lg" margin="20px" >ASOS-Clone</Heading> 
+            <hr />
+            <Heading size="md" margin="20px" textAlign="left" >
+              Tech-Stack :  React | React-Routing | Context-API | Chakra UI</Heading> 
+              <Heading size="md" margin="20px" textAlign="left">Features :</Heading> 
+              <Text fontWeight="bold" size="md" margin="20px" textAlign="left">
+               <li>An individual project executed in 4 days. </li> 
+               <li>User can login.</li> 
+               <li>Users can see products according to the categories.</li>
+              </Text>
+              <Box className={styles.projectsBtn} >
+              <Link textDecoration="none" href='https://ankit-yadav09.github.io/asos-clone/' isExternal>
+              <Button className={styles.projectsBtnDemo}>Live</Button>
+              </Link>
+
+              <Link textDecoration="none" href='https://github.com/Ankit-yadav09/asos-clone' isExternal>
+              <Button>View Code</Button>
+              </Link>
+              </Box>
+              
+            </Box>
+            <Box className={styles.projectImg}>
+             <Image
+              width={{ sm: 60, lg:1000 }}
+              height={{ sm: 60, lg:400 }}
+              marginTop="10"
+              marginBottom="10"
+              src={process.env.PUBLIC_URL+"/asospic.png"}
+            />
+            </Box>
         </Box>
 
+        <br />
+        <br />
+
+        <Box className={styles.projects}>
+          
+          <Box className={styles.projectHead}>
+          <Heading size="lg" margin="20px" >Banggood-Clone</Heading> 
+            <hr />
+            <Heading size="md" margin="20px" textAlign="left" >
+              Tech-Stack :  JavaScript | HTML | CSS </Heading> 
+              <Heading size="md" margin="20px" textAlign="left">Features :</Heading> 
+              <Text fontWeight="bold" size="md" margin="20px" textAlign="left">
+               <li>One-week project in collaboration with 5 other web developers. </li> 
+               <li>User can login and signup.</li> 
+               <li>Users can see products according to the categories.</li>
+               <li>Users can add items to cart</li>
+               <li>Users can make payment</li>
+              </Text>
+              <Box className={styles.projectsBtn} >
+              <Link textDecoration="none" href='https://ankit-yadav09.github.io/Banggood.in-clone/' isExternal>
+              <Button className={styles.projectsBtnDemo}>Live</Button>
+              </Link>
+
+              <Link textDecoration="none" href='https://github.com/Ankit-yadav09/Banggood.in-clone' isExternal>
+              <Button>View Code</Button>
+              </Link>
+              </Box>
+              
+            </Box>
+            <Box className={styles.projectImg}>
+             <Image
+              width={{ sm: 60, lg:1000 }}
+              height={{ sm: 60, lg:400 }}
+              marginTop="10"
+              marginBottom="10"
+              src={process.env.PUBLIC_URL+"/banggoodpic.png"}
+            />
+            </Box>
+        </Box>
+
+        <br />
+        <br />
+
+        <Box className={styles.projects}>
+          
+          <Box className={styles.projectHead}>
+          <Heading size="lg" margin="20px" >Kindmeal.my-Clone</Heading> 
+            <hr />
+            <Heading size="md" margin="20px" textAlign="left" >
+              Tech-Stack :  React | React-Routing | JavaScript | Context-API | Chakra UI </Heading> 
+              <Heading size="md" margin="20px" textAlign="left">Features :</Heading> 
+              <Text fontWeight="bold" size="md" margin="20px" textAlign="left">
+               <li>Users can see delicious dishes and find restaurants.</li>
+               <li>An individual project executed in 4 days. </li> 
+               <li>User can login / logout.</li> 
+               
+              </Text>
+              <Box className={styles.projectsBtn} >
+              <Link textDecoration="none" href='https://ankit-yadav09.github.io/Kindmeal.my-Clone/' isExternal>
+              <Button className={styles.projectsBtnDemo}>Live</Button>
+              </Link>
+
+              <Link textDecoration="none" href='https://github.com/Ankit-yadav09/Kindmeal.my-Clone' isExternal>
+              <Button>View Code</Button>
+              </Link>
+              </Box>
+              
+            </Box>
+            <Box className={styles.projectImg}>
+             <Image
+              width={{ sm: 60, lg:1000 }}
+              height={{ sm: 60, lg:400 }}
+              marginTop="10"
+              marginBottom="10"
+              src={process.env.PUBLIC_URL+"/kindmealpic.png"}
+            />
+            </Box>
+        </Box>
+
+        <br />
+        <br />
         <Box ref={contact} className={styles.contact}>
-          contact
+        <Link  href='https://github.com/Ankit-yadav09' isExternal>
+          <Heading size="sm" >Github</Heading>
+        </Link>
+          <Heading size="sm" >
+            Email: <a>yadavankit46565@gmail.com</a> 
+          </Heading>
+          <Heading size="sm" >
+            Contact No: +91 8307740489
+          </Heading>
         </Box>
       </Box>
   )

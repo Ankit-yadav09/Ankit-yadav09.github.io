@@ -17,17 +17,39 @@
     text-align: center;
 }
 .projects{
-    height: 600px;
+    width: 100%;
     margin-top: 30px;
-    border: 1px solid grey;
-    background-color: rgb(151, 112, 243);
+    /* border: 1px solid grey; */
+    /* background-color: rgb(151, 112, 243); */
     text-align: center;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.projects .projectHead{
+    width: 50%;
+}
+.projects .projectImg{
+    /* border: 1px solid grey; */
+    width: 50%;
+}
+.projects .projectImg:hover{
+    transform: scale(1.05);
+    transition: 3s;
+}
+.projectsBtn{
+    /* border: 1px solid grey; */
+    width: 300px;
+    
+}
+.projectsBtnDemo{
+    background-color: rgb(189, 237, 57);
+    margin-right: 30px;
 }
 .contact{
-    height: 600px;
+    height: 100px;
     margin-top: 30px;
-    border: 1px solid grey;
-    background-color: rgb(86, 231, 226);
+    /* border: 1px solid grey; */
+    /* background-color: rgb(86, 231, 226); */
     text-align: center;
 }
 .scrollTopbtn{
