@@ -1,3 +1,7 @@
+/* .portImage:hover{
+
+    transform: rotateX(2);
+} */
 .about{
     /* height: 600px; */
     margin-top: 30px;
@@ -7,16 +11,31 @@
     margin-top: 150px;
     margin-bottom: 200px;
 }
+.resumeBtn:hover{
+    color: rgb(2, 25, 128);
+    transform: scale(1.05);
+    background-color: rgb(130, 118, 118);
+}
 .skills{
     height: 600px;
     margin-top: 30px;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .skillsHeading{
     padding: 5px;
     height: 50px;
     
+}
+.eachSkill:hover{
+    transform: scale(1.05);
+    transition: 0s;
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    box-shadow: rgba(68, 66, 66, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    /* border: 1px solid grey; */
 }
 .projects{
     width: 100%;

@@ -78,7 +78,7 @@ function Middle() {
             </Text>
             
           </Box>
-          <Image
+          <Image  className={styles.portImage}
               borderRadius='full'
               width={{ sm: 60, md:200, lg:400 ,base:60}}
               src={process.env.PUBLIC_URL+"/port.jpg"}
@@ -135,7 +135,7 @@ function Middle() {
               An inspiring Full Stack Web Developer who is keen to get new experiance and ready to learn, ehnance and apply the skills.
             </Text>
             
-            <Button onClick={handleClick} mt={35} color="white" backgroundColor='blue.500'>Resume</Button>
+            <Button className={styles.resumeBtn} onClick={handleClick} mt={35} color="white" backgroundColor='blue.500'>Resume</Button>
 
           </Box>
         </Box>
@@ -154,17 +154,17 @@ function Middle() {
           <Heading color="teal.600" fontWeight="semibold">Front-End</Heading>
           <br />
           <Grid templateColumns='repeat(6, 1fr)' gap={6} className={styles.skillsGrid}>
-            <GridItem w='100%' h='20' bg='gray.300' >
+            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >HTML</Heading> </GridItem>
-            <GridItem w='100%' h='20' bg='gray.300' >
+            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >CSS</Heading> </GridItem>
-            <GridItem w='100%' h='20' bg='gray.300' >
+            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >JAVASCRIPT</Heading> </GridItem>
-            <GridItem w='100%' h='20' bg='gray.300' >
+            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >REACT</Heading> </GridItem>
-            <GridItem w='100%' h='20' bg='gray.300' >
+            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >REDUX</Heading> </GridItem>
-            <GridItem w='100%' h='20' bg='gray.300' >
+            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >CHAKRA UI</Heading> </GridItem>
             
           </Grid>
@@ -179,11 +179,11 @@ function Middle() {
           <Heading color="teal.600" fontWeight="semibold">Back-End and Database</Heading>
           <br />
           <Grid templateColumns='repeat(3, 1fr)' gap={6} className={styles.skillsGrid}>
-            <GridItem w='100%' h='20' bg='gray.300' >
+            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >NODE</Heading> </GridItem>
-            <GridItem w='100%' h='20' bg='gray.300' >
+            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >EXPRESS</Heading> </GridItem>
-            <GridItem w='100%' h='20' bg='gray.300' >
+            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >MONGODB</Heading> </GridItem>
             
           </Grid>
