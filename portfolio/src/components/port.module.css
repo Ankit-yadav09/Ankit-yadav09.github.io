@@ -2,3 +2,17 @@
     border: 1px solid greenyellow;
     height: fit-content;
 }
+.navBox{
+    border: 1px solid black;
+    /* width: 100%; */
+    margin: auto;
+}
+@media (min-width:833px) {
+    
+}
+@media (max-width:832px) {
+    
+}
+@media (max-width:415px) {
+    
+}

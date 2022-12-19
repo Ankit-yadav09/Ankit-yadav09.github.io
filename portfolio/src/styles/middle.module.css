@@ -5,11 +5,21 @@
 .about{
     /* height: 600px; */
     margin-top: 30px;
-    /* border: 1px solid grey; */
-    /* background-color: rgb(133, 233, 133); */
+    border: 1px solid #f69898;
+    background-color: rgb(251, 255, 0);
     text-align: center;
     margin-top: 150px;
     margin-bottom: 200px;
+}
+.picSection{
+    border: 1px solid #808080;
+    background-color: rgb(149, 242, 149);
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+.helloSection{
+    border: 1px solid #808080;
 }
 .resumeBtn:hover{
     color: rgb(2, 25, 128);
@@ -24,6 +34,7 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .skillsHeading{
+    border: 1px solid grey;
     padding: 5px;
     height: 50px;
     
@@ -88,4 +99,130 @@
 .scrollTopbtn:hover{
     opacity: 1;
     color:rgb(251, 44, 44)
+}
+.hiiBox{
+     border: 1px solid grey;
+     width: 60%;
+     height: auto;
+     margin: auto;
+    
+}
+.hiiBoxOuter{
+    border: 1px solid blue; 
+    padding: 10px 10px;
+}
+
+
+
+@media (min-width:833px) {
+    .picture{
+        margin: auto;
+        height: 250px;
+        width: 250px;
+        margin-right: 20px;
+    }
+    .helloSection{
+        margin: auto;
+        background-color: rgb(238, 196, 145);
+        /* border-radius: 30%; */
+        width: 100%;
+        padding: 10px;
+    }
+    .picSection{
+        border: 1px solid #808080;
+        background-color: rgb(149, 242, 149);
+        margin: auto;
+        display: flex;
+        width: 80%;
+    }
+    .skillsGrid{
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: auto;
+    }
+}
+@media (max-width:832px) {
+    .picture{
+        margin: auto;
+        height: 200px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .aboutText{
+        text-align: center;
+    }
+    .picSection{
+        border: 1px solid #808080;
+        background-color: rgb(149, 242, 149);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .helloSection{
+        margin: auto;
+        background-color: rgb(238, 196, 145);
+        border-radius: 30%;
+        width: 100%;
+        padding: 10px;
+    }
+    .hiiBox{
+        width: 60%;
+        height: auto;
+        margin: auto;   
+   }
+   .skillsGrid{
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: auto;
+}
+}
+
+@media (max-width:415px) {
+    .hiiBox{
+        width: 100%;
+    }
+    .portImage{
+        height: 200px;
+        width: 200px;
+    }
+    .aboutText{
+        text-align: center;
+        /* font-size: medium; */
+    }
+    .picture{
+        margin: auto;
+        height: 150px;
+        width: 150px;
+        margin-bottom: 10px;
+    }
+    .picSection{
+        border: 1px solid #808080;
+        background-color: rgb(149, 242, 149);
+        width: 100%;
+        margin: auto;
+    }
+    .helloSection{
+        margin: auto;
+        height: auto;
+        width: auto;
+        padding: 10px;
+        /* margin-left: -107px; */
+        /* justify-content: start; */
+    }
+    .skillsGrid{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+    }
+    .projects{
+        border: 1px solid blue;
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .projectHead{
+        border: 1px solid rgb(83, 242, 55);
+        /* width: 800px; */
+        margin: auto;
+    }
+    .projectImg{
+        margin: auto;
+    }
 }

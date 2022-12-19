@@ -5,9 +5,9 @@ import Middle from './components/Middle';
 function App() {
   return (
       
-      <VStack padding={5}>
+      // <VStack padding={5}>
         <Middle/>
-      </VStack>
+      // </VStack>
 
   );
 }

@@ -44,7 +44,7 @@ function Middle() {
   }
   
     return (
-      <Box>
+      <Box style={{zoom:"0.9"}}>
         <Navbar
         about={about} 
         skills={skills} projects={projects}
@@ -54,11 +54,13 @@ function Middle() {
         
         <ShowScrollTop />
         <br />
-        <Box p={20} display={{ md: 'flex' }}>
+        <Box className={styles.hiiBoxOuter}>
+          <Box className={styles.hiiBox} p={20} display={{ md: 'flex' }}>
           
           <Box backgroundColor='white.100' 
               width={{xl:"600px", lg:"500px", md:"300px", sm:"400px",base:"300px"}}
-              p={3} mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
+              p={3} mt={{ base: 4, md: 0 }} ml={{ md: 6 }}
+              >
             <Text fontSize={['sm', 'md', 'lg', '3xl']}
               fontWeight='bold'
               color='black.100'
@@ -84,6 +86,7 @@ function Middle() {
               src={process.env.PUBLIC_URL+"/port.jpg"}
 
             />
+          </Box>
         </Box>
           <br />
           <br />
@@ -94,26 +97,31 @@ function Middle() {
 
         <Box ref={about} className={styles.skillsHeading}
           backgroundColor="green.100" >
-          <Heading size="lg" textAlign="start">ABOUT</Heading>
+          <Heading className={styles.aboutText} size="lg" textAlign="start">ABOUT</Heading>
         </Box>
 
         <Box className={styles.about}>
           {/* About */}
-          <Box p={20} display={{ md: 'flex' }}>
-          <Box flexShrink={1}>
+          <Box className={styles.picSection} p={20} 
+          // display={{ md: 'flex' }}
+          >
+          <Box flexShrink={0}>
             <Image
               borderRadius='full'
-              width={{ sm: 60, lg:400 }}
+              // width={{ sm: "60px",md:"100px", lg:"200px" }}
+              className={styles.picture}
+              // h={{md:}}
               src='https://avatars.githubusercontent.com/u/101567851?v=4'
 
             />
             <Spacer></Spacer>
           </Box>
           
-          <Box backgroundColor='green.100' 
-              width={{xl:"600px", lg:"500px", md:"300px", sm:"400px",base:"300px"}}
-              p={3} mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
-            <Text fontSize={['sm', 'md', 'lg', '3xl']}
+          <Box className={styles.helloSection} backgroundColor='green.100' 
+              // width={{xl:"600px", lg:"500px", md:"300px", sm:"400px",base:"300px"}}
+              // p={3} mt={{ base: 4, md: 0 }} ml={{ md: 6 }}
+              >
+            <Text fontSize={['md', 'md', 'lg', '3xl']}
               fontWeight='bold'
               color='black.100'
               mb={5}
@@ -121,17 +129,17 @@ function Middle() {
               Hello, 
             </Text>
             
-            <Text fontSize={['sm', 'lg', '2xl', '5xl']}
+            <Text fontSize={['lg', 'xl', '2xl', '5xl']}
               fontWeight='bold'
               fontFamily="sans-serif"
               letterSpacing='wide'
               color='teal.600'
               animation="ease-in"
             >
-            I am Ankit
+            I am <span color='grey'> Ankit </span>
             </Text>
             
-            <Text animation="backwards" p={5} fontSize={20} mt={0} color='gray.800'>
+            <Text fontSize={['md', 'lg', 'lg', '2xl']} animation="backwards" p={5} mt={0} color='gray.800'>
               An inspiring Full Stack Web Developer who is keen to get new experiance and ready to learn, ehnance and apply the skills.
             </Text>
             
@@ -144,7 +152,7 @@ function Middle() {
         
         <Box ref={skills} className={styles.skillsHeading}
           backgroundColor="green.100" >
-          <Heading size="lg" textAlign="start">SKILLS</Heading>
+          <Heading className={styles.aboutText} size="lg" textAlign="start">SKILLS</Heading>
         </Box>
         
         <Box  className={styles.skills}>
@@ -153,7 +161,7 @@ function Middle() {
           <br />
           <Heading color="teal.600" fontWeight="semibold">Front-End</Heading>
           <br />
-          <Grid templateColumns='repeat(6, 1fr)' gap={6} className={styles.skillsGrid}>
+          <Grid gap={6} className={styles.skillsGrid}>
             <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
              <Heading size="md" margin="20px" >HTML</Heading> </GridItem>
             <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
@@ -196,7 +204,7 @@ function Middle() {
 
           <Box ref={projects} className={styles.skillsHeading}
           backgroundColor="green.100" >
-          <Heading size="lg" textAlign="start">PROJECTS</Heading>
+          <Heading className={styles.aboutText} size="lg" textAlign="start">PROJECTS</Heading>
         </Box>
           <br />
         <Box className={styles.projects}>
@@ -318,7 +326,7 @@ function Middle() {
 
         <Box ref={contact} className={styles.skillsHeading}
           backgroundColor="green.100" >
-          <Heading size="lg" textAlign="start">CONTACT</Heading>
+          <Heading className={styles.aboutText} size="lg" textAlign="start">CONTACT</Heading>
         </Box>
 
         <Box className={styles.contact}>
