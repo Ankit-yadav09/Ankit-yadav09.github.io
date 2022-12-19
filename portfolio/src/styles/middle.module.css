@@ -208,14 +208,27 @@
         margin: auto;   
    }
    .skillsGrid{
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
+    row-gap: 30px;
     }
     /* .skillsHeading{
         margin-top: 250px;
     } */
     .skillsGridBackend{
         width: 60%;
+        margin: auto;
+    }
+    .eachSkill:hover{
+        transform: scale(1.25);
+        transition: 2s;
+        cursor: pointer;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(199, 195, 195);
+        /* color: white; */
+        box-shadow: rgba(162, 156, 156, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        /* border: 1px solid grey; */
     }
 }
 
@@ -270,6 +283,10 @@
         margin: auto;
     }
     .projectImg{
+        margin: auto;
+    }
+    .skillsGridBackend{
+        width: 60%;
         margin: auto;
     }
 }
