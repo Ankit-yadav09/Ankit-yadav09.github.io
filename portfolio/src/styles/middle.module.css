@@ -5,22 +5,27 @@
 .about{
     /* height: 600px; */
     margin-top: 30px;
-    border: 1px solid #f69898;
-    background-color: rgb(251, 255, 0);
+    /* border: 1px solid #f69898; */
+    /* background-color: rgb(251, 255, 0); */
     text-align: center;
     margin-top: 150px;
     margin-bottom: 200px;
 }
+.aboutText{
+    text-align: center;
+    /* border: 1px solid green; */
+    margin-left: 50px;
+}
 .picSection{
-    border: 1px solid #808080;
-    background-color: rgb(149, 242, 149);
+    /* border: 1px solid #808080; */
+    /* background-color: rgb(149, 242, 149); */
     width: 60%;
     margin: auto;
     display: flex;
 }
-.helloSection{
+/* .helloSection{
     border: 1px solid #808080;
-}
+} */
 .resumeBtn:hover{
     color: rgb(2, 25, 128);
     transform: scale(1.05);
@@ -34,18 +39,21 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .skillsHeading{
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     padding: 5px;
     height: 50px;
+    margin-top: 100px;
     
 }
 .eachSkill:hover{
-    transform: scale(1.05);
-    transition: 0s;
+    transform: scale(1.25);
+    transition: 2s;
     cursor: pointer;
-    background-color: gray;
-    color: white;
-    box-shadow: rgba(68, 66, 66, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(199, 195, 195);
+    /* color: white; */
+    box-shadow: rgba(162, 156, 156, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     /* border: 1px solid grey; */
 }
 .projects{
@@ -74,12 +82,13 @@
     
 }
 .projectsBtnDemo{
-    background-color: rgb(189, 237, 57);
+    /* background-color: rgb(189, 237, 57); */
     margin-right: 30px;
 }
 .contact{
     height: 100px;
     margin-top: 30px;
+    margin-bottom: 50px;
     /* border: 1px solid grey; */
     /* background-color: rgb(86, 231, 226); */
     text-align: center;
@@ -101,20 +110,45 @@
     color:rgb(251, 44, 44)
 }
 .hiiBox{
-     border: 1px solid grey;
+     /* border: 1px solid grey; */
      width: 60%;
      height: auto;
      margin: auto;
     
 }
 .hiiBoxOuter{
-    border: 1px solid blue; 
+    /* border: 1px solid blue;  */
     padding: 10px 10px;
+}
+.gitStats{
+    /* border: 1px solid blue; */
+    margin-top: 50px;
+    margin: auto;
+    width: 100%;
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.gitStatsImage{
+    margin: auto;
+    height: 250px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.gitCal{
+    width: 80%;
+    margin: auto;
 }
 
 
-
 @media (min-width:833px) {
+    /* .hiiBox{
+        width: 100%;
+        margin-top: 200px;
+    } */
+    .projectDesc{
+        font-size: 22px;
+        font-weight: bold;
+    }
     .picture{
         margin: auto;
         height: 250px;
@@ -123,43 +157,47 @@
     }
     .helloSection{
         margin: auto;
-        background-color: rgb(238, 196, 145);
+        /* background-color: rgb(238, 196, 145); */
         /* border-radius: 30%; */
         width: 100%;
         padding: 10px;
     }
     .picSection{
-        border: 1px solid #808080;
-        background-color: rgb(149, 242, 149);
+        /* border: 1px solid #808080; */
+        /* background-color: rgb(149, 242, 149); */
         margin: auto;
         display: flex;
         width: 80%;
     }
     .skillsGrid{
-        grid-template-columns: repeat(6,1fr);
+        grid-template-columns: repeat(7,1fr);
         grid-template-rows: auto;
+    }
+    .skillsGridBackend{
+        width: 60%;
+        margin: auto;
     }
 }
 @media (max-width:832px) {
     .picture{
         margin: auto;
-        height: 200px;
-        width: 200px;
+        height: 300px;
+        width: 300px;
         margin-bottom: 20px;
     }
     .aboutText{
         text-align: center;
     }
     .picSection{
-        border: 1px solid #808080;
-        background-color: rgb(149, 242, 149);
+        /* border: 1px solid #808080; */
+        /* background-color: rgb(149, 242, 149); */
         margin: auto;
         display: flex;
         flex-direction: column;
     }
     .helloSection{
         margin: auto;
-        background-color: rgb(238, 196, 145);
+        /* background-color: rgb(238, 196, 145); */
         border-radius: 30%;
         width: 100%;
         padding: 10px;
@@ -172,12 +210,19 @@
    .skillsGrid{
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: auto;
-}
+    }
+    /* .skillsHeading{
+        margin-top: 250px;
+    } */
+    .skillsGridBackend{
+        width: 60%;
+    }
 }
 
 @media (max-width:415px) {
     .hiiBox{
         width: 100%;
+        margin-top: 50px;
     }
     .portImage{
         height: 200px;
@@ -194,10 +239,11 @@
         margin-bottom: 10px;
     }
     .picSection{
-        border: 1px solid #808080;
-        background-color: rgb(149, 242, 149);
+        /* border: 1px solid #808080; */
+        /* background-color: rgb(149, 242, 149); */
         width: 100%;
         margin: auto;
+        margin-top: 150px;
     }
     .helloSection{
         margin: auto;
@@ -210,15 +256,16 @@
     .skillsGrid{
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: auto;
+        row-gap: 20px;
     }
     .projects{
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         /* width: 100%; */
         display: flex;
         flex-direction: column-reverse;
     }
     .projectHead{
-        border: 1px solid rgb(83, 242, 55);
+        /* border: 1px solid rgb(83, 242, 55); */
         /* width: 800px; */
         margin: auto;
     }

@@ -4,7 +4,7 @@ import styles from "../styles/middle.module.css"
 import Navbar from './Navbar'
 import ShowScrollTop from './ShowScrollTop'
 import { Link } from '@chakra-ui/react'
-
+import GitCal from './GitCal'
 
 const breakpoints = {
     sm: '320px',
@@ -17,6 +17,7 @@ const breakpoints = {
 
 function Middle() {
 
+  const home = useRef(null);
   const about = useRef(null);
   const skills = useRef(null);
   const projects = useRef(null);
@@ -32,7 +33,6 @@ function Middle() {
   const handleClick=()=>{
     fetch('Ankit_Resume.pdf').then(response => {
       response.blob().then(blob => {
-          // Creating new object of PDF file
           const fileURL = window.URL.createObjectURL(blob);
           // Setting various property values
           let alink = document.createElement('a');
@@ -46,6 +46,7 @@ function Middle() {
     return (
       <Box style={{zoom:"0.9"}}>
         <Navbar
+        home={home}
         about={about} 
         skills={skills} projects={projects}
         contact={contact} 
@@ -54,7 +55,7 @@ function Middle() {
         
         <ShowScrollTop />
         <br />
-        <Box className={styles.hiiBoxOuter}>
+        <Box ref={home} className={styles.hiiBoxOuter}>
           <Box className={styles.hiiBox} p={20} display={{ md: 'flex' }}>
           
           <Box backgroundColor='white.100' 
@@ -162,18 +163,34 @@ function Middle() {
           <Heading color="teal.600" fontWeight="semibold">Front-End</Heading>
           <br />
           <Grid gap={6} className={styles.skillsGrid}>
-            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
-             <Heading size="md" margin="20px" >HTML</Heading> </GridItem>
-            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
-             <Heading size="md" margin="20px" >CSS</Heading> </GridItem>
-            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
-             <Heading size="md" margin="20px" >JAVASCRIPT</Heading> </GridItem>
-            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
-             <Heading size="md" margin="20px" >REACT</Heading> </GridItem>
-            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
-             <Heading size="md" margin="20px" >REDUX</Heading> </GridItem>
-            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
-             <Heading size="md" margin="20px" >CHAKRA UI</Heading> </GridItem>
+            <GridItem className={styles.eachSkill} w='100%' h='20' >
+            <Image m={"auto"} w="50px" h="50px" src='./Images/html-Image.png'/>
+             <Heading size="md" margin="20px" >HTML</Heading> 
+             </GridItem> 
+            <GridItem className={styles.eachSkill} w='100%' h='20' >
+            <Image m={"auto"} w="50px" h="50px" src='./Images/css-logo.png'/>
+             <Heading size="md" margin="20px" >CSS</Heading>
+             </GridItem> 
+            <GridItem className={styles.eachSkill} w='100%' h='20' >
+            <Image m={"auto"} w="50px" h="50px" src='./Images/js-logo.png'/>
+             <Heading size="md" margin="20px" >JAVASCRIPT</Heading>
+             </GridItem> 
+            <GridItem className={styles.eachSkill} w='100%' h='20' >
+            <Image m={"auto"} w="50px" h="50px" src='./Images/react-icon.png'/>
+             <Heading size="md" margin="20px" >REACT</Heading>
+             </GridItem> 
+            <GridItem className={styles.eachSkill} w='100%' h='20' >
+            <Image m={"auto"} w="50px" h="50px" src='./Images/redux-logo.png'/>
+             <Heading size="md" margin="20px" >REDUX</Heading> 
+             </GridItem> 
+            <GridItem className={styles.eachSkill} w='100%' h='20' >
+            <Image m={"auto"} w="50px" h="50px" src='./Images/github-logo.png'/>
+             <Heading size="md" margin="20px" >GITHUB</Heading> 
+             </GridItem> 
+            <GridItem className={styles.eachSkill} w='100%' h='20' >
+            <Image m={"auto"} w="50px" h="50px" src='./Images/chakraui-logo.jpg'/>
+             <Heading size="md" margin="20px" >CHAKRA UI</Heading>
+             </GridItem> 
             
           </Grid>
           <br />
@@ -186,13 +203,22 @@ function Middle() {
           
           <Heading color="teal.600" fontWeight="semibold">Back-End and Database</Heading>
           <br />
-          <Grid templateColumns='repeat(3, 1fr)' gap={6} className={styles.skillsGrid}>
-            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
-             <Heading size="md" margin="20px" >NODE</Heading> </GridItem>
-            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
-             <Heading size="md" margin="20px" >EXPRESS</Heading> </GridItem>
-            <GridItem className={styles.eachSkill} w='100%' h='20' bg='gray.300' >
-             <Heading size="md" margin="20px" >MONGODB</Heading> </GridItem>
+          <Grid templateColumns='repeat(3, 1fr)' gap={6} className={styles.skillsGridBackend}>
+            <GridItem className={styles.eachSkill} w='100%' h='20' >
+             <Image m={"auto"} w="100px" h="60px" src='./Images/node-logo.png' />
+             {/* <Heading size="md" margin="20px" >NODE</Heading>  */}
+             
+             </GridItem>
+            <GridItem className={styles.eachSkill} w='100%' h='20' >
+             <Image m={"auto"} w="100px" h="60px" src='./Images/express-js.png' />
+             {/* <Heading size="md" margin="20px" >EXPRESS</Heading>  */}
+             
+             </GridItem>
+            <GridItem className={styles.eachSkill} w='100%' h='20' >
+             <Image m={"auto"} w="100px" h="60px" src='./Images/mongoDB-logo.jpg' />
+             {/* <Heading size="md" margin="20px" >MONGODB</Heading>  */}
+             
+             </GridItem>
             
           </Grid>
         </Box>
@@ -201,7 +227,25 @@ function Middle() {
           <br />
           <br />
           <br />
+          
+        {/* Github stats */}
+          <Box>
+          <Box ref={projects} className={styles.skillsHeading}
+          backgroundColor="green.100" >
+          <Heading className={styles.aboutText} size="lg" textAlign="start"> GITHUB STATS & CALENDAR</Heading>
+        </Box>
+        {/* Github Calendar */}
+          <Box className={styles.gitStats}>
+              <Image className={styles.gitStatsImage} src="https://github-readme-stats.vercel.app/api?username=Ankit-yadav09&show_icons=true&count_private=true" alt="Ankit-yadav09" />
+          
+            <Box className={styles.gitCal}>
+              <GitCal />
+            </Box>
+          </Box>
+          </Box>
 
+          
+            
           <Box ref={projects} className={styles.skillsHeading}
           backgroundColor="green.100" >
           <Heading className={styles.aboutText} size="lg" textAlign="start">PROJECTS</Heading>
@@ -212,6 +256,7 @@ function Middle() {
           <Box className={styles.projectHead}>
           <Heading size="lg" margin="20px" color='teal.600'>ASOS-Clone</Heading> 
             <hr />
+            <Text className={styles.projectDesc}>This is a clone of ASOS. ASOS is a British online fashion and cosmetic retailer. We can buy the latest fashion products for men and women both.</Text>
             <Heading size="md" margin="20px" textAlign="left" >
               Tech-Stack :  React | React-Routing | Context-API | Chakra UI</Heading> 
               <Heading size="md" margin="20px" textAlign="left">Features :</Heading> 
@@ -250,6 +295,7 @@ function Middle() {
           <Box className={styles.projectHead}>
           <Heading size="lg" margin="20px" color='teal.600'>Banggood-Clone</Heading> 
             <hr />
+            <Text className={styles.projectDesc}>This is a clone of Banggood. Banggood is a global leading direct-to-consumer online retailer, providing well-selected products that are highly cost-effective.</Text>
             <Heading size="md" margin="20px" textAlign="left" >
               Tech-Stack :  JavaScript | HTML | CSS </Heading> 
               <Heading size="md" margin="20px" textAlign="left">Features :</Heading> 
@@ -290,6 +336,7 @@ function Middle() {
           <Box className={styles.projectHead}>
           <Heading size="lg" margin="20px" color='teal.600'>Kindmeal.my-Clone</Heading> 
             <hr />
+            <Text className={styles.projectDesc}>It's a clone of KindMeal.my. KindMeal.my is Malaysia's leading meat-free lifestyle platform, indulging you with delicious vegetarian meals to save animals and the environment.</Text>
             <Heading size="md" margin="20px" textAlign="left" >
               Tech-Stack :  React | React-Routing | JavaScript | Context-API | Chakra UI </Heading> 
               <Heading size="md" margin="20px" textAlign="left">Features :</Heading> 
@@ -326,17 +373,19 @@ function Middle() {
 
         <Box ref={contact} className={styles.skillsHeading}
           backgroundColor="green.100" >
-          <Heading className={styles.aboutText} size="lg" textAlign="start">CONTACT</Heading>
+          <Heading className={styles.aboutText} size="lg" textAlign="start"></Heading>
         </Box>
 
         <Box className={styles.contact}>
         <Link  href='https://github.com/Ankit-yadav09' isExternal>
-          <Heading size="sm" >Github</Heading>
+          <Heading size="md" >Github</Heading>
         </Link>
-          <Heading size="sm" >
+        <br />
+          <Heading size="md" >
             Email: <a>yadavankit46565@gmail.com</a> 
           </Heading>
-          <Heading size="sm" >
+          <br />
+          <Heading size="md" >
             Contact No: +91 8307740489
           </Heading>
         </Box>
