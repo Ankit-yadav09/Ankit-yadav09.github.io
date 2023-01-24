@@ -1,10 +1,11 @@
 import React, { useRef } from 'react'
-import { Box, Button, Container, extendTheme, Grid, GridItem, Heading, Image, LinkBox, Spacer, Text } from '@chakra-ui/react'
+import { Box, Button, Container, extendTheme, Grid, GridItem, Heading, Icon, Image, LinkBox, Spacer, Text } from '@chakra-ui/react'
 import styles from "../styles/middle.module.css"
 import Navbar from './Navbar'
 import ShowScrollTop from './ShowScrollTop'
 import { Link } from '@chakra-ui/react'
 import GitCal from './GitCal'
+import { FaGithub } from "react-icons/fa";
 
 const breakpoints = {
     sm: '320px',
@@ -67,7 +68,14 @@ function Middle() {
               color='black.100'
               mb={5}
             >
-              Hii, 
+              Hii,
+            </Text>
+            <Text fontSize={['sm', 'md', 'lg', '4xl']}
+              fontWeight='bold'
+              color='black.100'
+              mb={5}
+            >
+             I'm Ankit
             </Text>
             
             <Text fontSize={['sm', 'lg', '2xl', '4xl']}
@@ -201,7 +209,7 @@ function Middle() {
           <br />
           
           
-          <Heading color="teal.600" fontWeight="semibold">Back-End and Database</Heading>
+          <Heading className={styles.backendHeading} color="teal.600" fontWeight="semibold">Back-End and Database</Heading>
           <br />
           <Grid templateColumns='repeat(3, 1fr)' gap={6} className={styles.skillsGridBackend}>
             <GridItem className={styles.eachSkill} w='100%' h='20' >
@@ -378,7 +386,8 @@ function Middle() {
 
         <Box className={styles.contact}>
         <Link  href='https://github.com/Ankit-yadav09' isExternal>
-          <Heading size="md" >Github</Heading>
+          {/* <Heading size="md" >Github</Heading> */}
+          <Icon fontSize={["22px","32px"]} as={FaGithub} />
         </Link>
         <br />
           <Heading size="md" >
